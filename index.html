@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <section class="container content-section">
+            <h2 class="section-header">CATS</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">mishmish</span>
+                    <img class="shop-item-image" src="Images/3.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$25.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">leo</span>
+                    <img class="shop-item-image" src="Images/2.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$22.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">loz</span>
+                    <img class="shop-item-image" src="Images/1.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$14.99</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+         </section>
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">Item</span>
+                <span class="cart-price cart-header cart-column">Price</span>
+                <span class="cart-quantity cart-header cart-column">Quantity</span>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-item-details">
+            <div class="cart-total">
+                <span class="cart-total-title">Items in cart:</span>
+                <span class="cart-item-count">$0</span>
+            </div>
+            <div class="cart-total">
+                <span class="cart-total-title">Total:</span>
+                <span class="cart-total-price">$0</span>
+            </div>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+    <script src="script.js"></script>
+</body>
+</html>
