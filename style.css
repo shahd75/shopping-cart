@@ -146,7 +146,6 @@
 .cart-item-details{
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -208,4 +207,5 @@
 
 .btn-danger:hover {
     background-color: #CC4C4C;
+
 }
