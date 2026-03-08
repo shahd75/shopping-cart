@@ -68,6 +68,18 @@ function quantityChanged(event) {
   saveCart();
 }
 
+function itemsCounter() {
+  let cartItemCount = document.getElementsByClassName("cart-item-count");
+  let cartQuantityInput = document.getElementsByClassName(
+    "cart-quantity-input"
+  );
+  let totalCount = 0;
+  for (let i = 0; i < cartQuantityInput.length; i++) {
+    totalCount += Number(cartQuantityInput[i].value);
+  }
+  cartItemCount[0].textContent = totalCount;
+}
+
 function addToCartClicked(event) {
   let button = event.target;
   let shopItem = button.parentElement.parentElement;
@@ -77,6 +89,7 @@ function addToCartClicked(event) {
   console.log(title, price, imageSrc);
   addItemToCart(title, price, imageSrc);
   updateCartTotal();
+  itemsCounter()
   saveData();
 }
 
@@ -112,6 +125,7 @@ function addItemToCart(title, price, imageSrc) {
   cartRow
     .getElementsByClassName("cart-quantity-input")[0]
     .addEventListener("change", quantityChanged);
+  itemsCounter()
   saveCart();
 }
 
@@ -132,6 +146,7 @@ function updateCartTotal() {
   total = Math.round(total * 100) / 100;
   document.getElementsByClassName("cart-total-price")[0].innerText =
     "$" + total;
+  itemsCounter()
   saveCart();
 }
 
@@ -179,3 +194,4 @@ function loadCart() {
 
   updateCartTotal();
 }
+
